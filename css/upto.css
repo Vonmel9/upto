@@ -146,10 +146,15 @@ section h1 {
     background-color: rgb(0, 147, 147) !important;
 }
 
-.item img {
-    width: 100%;
-}
+/*.carousel-inner {
+    position: relative;
+}*/
 
+.item img {
+    /* 1300 x 340   (3/4)*/
+    width: 100%;
+    height: auto !important;
+}
 
 .carousel-caption h3 {
   text-transform: uppercase;
@@ -196,11 +201,20 @@ section h1 {
     font-size: 30px !important;
 }
 
+.item img {
+    /* 1300 x 340   (3/4)*/
+    width: 100%;
+    height: auto !important;
+    min-width: 975px !important;
+    /*margin-left: -350px;*/
+}
+
 @media (max-width: 800px) {
+
     .carousel-caption .btn {
         padding: 0;
     }
-    .savoirPlus {
+    .carousel-caption .savoirPlus {
         display: none;
     }
 }
@@ -212,7 +226,7 @@ section h1 {
     .carousel-caption h3 {
         font-size: 15px;
     }
-    .savoirPlus {
+    .carousel-caption .savoirPlus {
         display: none;
     }
     .carousel-caption .btn {
@@ -227,7 +241,7 @@ section h1 {
     .carousel-caption h3 {
         font-size: 14px;
     }
-    .savoirPlus {
+    .carousel-caption .savoirPlus {
         display: none;
     }
     .carousel-caption .btn {
@@ -243,7 +257,7 @@ section h1 {
         font-size: 12px;
         display: inline-block;
     }
-    .savoirPlus {
+    .carousel-caption .savoirPlus {
         display: none;
     }
     .carousel-caption .btn {
@@ -256,7 +270,7 @@ section h1 {
         font-size: 8px;
         display: inline-block;
     }
-    .savoirPlus {
+    .carousel-caption .savoirPlus {
         display: none;
     }
 }

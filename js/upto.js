@@ -1,3 +1,60 @@
+$(document).ready(function() {
+	resizeSlider();
+});
+
+$(window).resize(function() {
+	resizeSlider();
+});
+
+function resizeSlider()
+{
+	// Carousel width
+	var carouselW = $("#carousel").css("width").split("px")[0];
+
+	// Calcul new image margin left to center
+	if (carouselW < 975)
+	{
+		var newImgML = (975 - carouselW) / 2;
+		$(".item img").css("min-width", "950px !important");
+		$(".item img").css("margin-left", "-"+newImgML+"px");
+	}
+	else {
+					$(".item img").css("min-width", "0px");
+					$(".item img").css("margin-left", "0px");
+			 }
+
+
+	if (carouselW < 500)
+	{
+		enablePortableCaption = true;
+	}
+	else enablePortableCaption = false;
+}
+
+var enablePortableCaption = false;
+
+function tooglePortableCaption()
+{
+		var id = $("#carousel .item.active .carousel-caption").attr("data-id");
+		console.log(id);
+
+		if (enablePortableCaption)
+		{
+				// Display none all default carousel caption
+				$("#carousel .item .carousel-caption").css("display", "none");
+				// Dispaly all portable carousel caption
+				$(".container_carousel .carousel-portablecaption").css("display", "none");
+				// Display only portable caption id
+				$("#portablecaption"+id).css("display", "block");
+		}
+		else {
+						$(".container_carousel .carousel-portablecaption").css("display", "none");
+						$("#carousel .item .carousel-caption").css("display", "block");
+				 }
+}
+
+setInterval(tooglePortableCaption, 200);
+
 // Return a XHR object
 function getXMLHttpRequest()
 {
@@ -377,7 +434,7 @@ $(window).scroll(function() {
 		$('.social-network').fadeIn('fast');
 	}
 	else $('.social-network').fadeOut('fast');
-	
+
 });
 
 // Menu hambuger
