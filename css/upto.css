@@ -388,7 +388,8 @@ section h1 {
 
 .langages {
     background: url(../img/bg-language.jpg) no-repeat 0 0;
-    background-attachment:fixed, scroll;
+    background-attachment:fixed;
+    background-size: cover;
     color: rgb(255, 255, 255);
     text-align: center;
 }
