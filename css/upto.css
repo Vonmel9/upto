@@ -443,7 +443,8 @@ section h1 {
 
 .langages {
     background: url(../img/bg-language.jpg) no-repeat 0 0;
-    background-attachment: fixed;
+    background-attachment:fixed;
+    background-size: cover;
     color: rgb(255, 255, 255);
     text-align: center;
 }
@@ -489,8 +490,14 @@ section h1 {
 }
 
 #langages {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 
@@ -519,10 +526,11 @@ section h1 {
         width: 55px;
     }
     #langages {
-        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
     }
 }
-
 
 /* =================================================
                   Part 5 : La promotion
@@ -657,10 +665,20 @@ section h1 {
 
 .partenaires_principaux,
 .partenaires_secondaire {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -669,7 +687,9 @@ section h1 {
 @media (min-width: 961px) {
     .partenaires_principaux,
     .partenaires_secondaire {
-        flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
     }
 }
 
@@ -689,7 +709,11 @@ section h1 {
 @media (max-width: 320px) {
     .partenaires_principaux,
     .partenaires_secondaire {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .partner img {
         display: block;
@@ -894,9 +918,17 @@ footer ul {
 /* chaque article */
 
 .pagePress .col-lg-8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .pagePress .logo {
@@ -1016,9 +1048,6 @@ footer ul {
     border: 1px solid rgb(204, 204, 204);
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
     -webkit-transform: skew(2deg, 2deg) translate(3px, 8px);
-    -moz-transform: skew(2deg, 2deg) translate(3px, 8px);
-    -ms-transform: skew(2deg, 2deg) translate(3px, 8px);
-    -o-transform: skew(2deg, 2deg) translate(3px, 8px);
     transform: skew(2deg, 2deg) translate(3px, 8px);
 }
 
@@ -1034,9 +1063,6 @@ footer ul {
     border: 1px solid rgb(204, 204, 204);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     -webkit-transform: skew(2deg, 2deg) translate(-1px, 2px);
-    -moz-transform: skew(2deg, 2deg) translate(-1px, 2px);
-    -ms-transform: skew(2deg, 2deg) translate(-1px, 2px);
-    -o-transform: skew(2deg, 2deg) translate(-1px, 2px);
     transform: skew(2deg, 2deg) translate(-1px, 2px);
 }
 
@@ -1134,8 +1160,6 @@ footer ul {
     width: 40px;
     height: 40px;
     border: 3px solid rgb(164, 0, 95);
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
     border-radius: 100%;
     display: block;
     -webkit-transition-duration: 0.5s;
@@ -1144,7 +1168,6 @@ footer ul {
 }
 
 .social-network a:hover {
-    -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
@@ -1174,10 +1197,21 @@ footer ul {
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 100% 100%;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    align-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-align-content: space-around;
+        -ms-flex-line-pack: distribute;
+            align-content: space-around;
     z-index: 9999;
     margin: 0 auto;
 }
@@ -1214,6 +1248,7 @@ footer ul {
     margin: 2% 0px;
     font-size: 38px;
     letter-spacing: 1px;
+    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
